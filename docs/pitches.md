@@ -1,7 +1,7 @@
-# Idea 1:
+## Idea 1:
 
-## Description:
+### Description:
 
-# Idea 2:
+## Idea 2:
 
-## Description:
+### Description:
