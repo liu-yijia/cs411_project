@@ -6,6 +6,6 @@
 
 ### User Story #3
 
-### User Story #4
+### User Story #4: As a customer, I want to be able to choose the genre of music when I ride with Uber to feel comfortable and enjoy my ride more.
 
 ### User Story #5: Logging Out
