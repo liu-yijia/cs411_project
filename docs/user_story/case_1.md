@@ -1,2 +1,2 @@
-## Making an Account and Logging in
+## User Story 1: Making an Account and Logging in
 
