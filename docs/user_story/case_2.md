@@ -1,2 +1,2 @@
-## Case 2: Link Spotify and Uber Account
+## User Story 2: Link Spotify and Uber Account
 
