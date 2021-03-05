@@ -1,6 +1,9 @@
 ## User Story 2: Link Spotify and Uber Account
 
-1. Log in to user's Spotify account.
-2. Give consent to access user's Spotify account.
-3. Log in to user's Uber account.
-4. Give consent to access user's Uber account.
+First, the user is prompted to log in to user's Spotify and Uber account. 
+
+Case 1: If the user has both Spotify and Uber account.
+Prompt the user to log in both of the accounts and give consent to access user's Spotify and Uber account.
+
+Case 2: If the user does not have Spotify or Uber account.
+Prompt the user to create a Spotify account and a Uber account. Then ask for consent to link both accounts to the webapp. 
