@@ -1,1 +1,1 @@
-## Case 3: Saving a Playlist
+## User Story 3: Saving a Playlist
