@@ -1,6 +1,8 @@
 ## User Story 2: Link Spotify and Uber Account
 
-First, the user is prompted to log in to user's Spotify and Uber account. 
+Actor: Web Application User
+
+Description: The user is prompted to log in to user's Spotify and Uber account, and then link the accounts to web application. 
 
 Case 1: If the user has both Spotify and Uber account.
 Prompt the user to log in both of the accounts and give consent to access user's Spotify and Uber account.
