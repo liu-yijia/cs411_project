@@ -1,1 +1,4 @@
 
+Project Assignment 3
+
+For our Uber-Spotify app, we are considering Flask and Django technology stacks. After doing more research, we decided to choose Flask as our technology stack. Django is only a good fit for small apps, and we are not quite sure if our app is small or not after looking at Uber and Spotify APIs. Also, Flask is simpler than Django. Since we are using Python, it is easier for us to use Flask and this could make the development of small features faster. Moreover, it has higher flexibility, higher compatibility with latest technologies, and smaller size of code base than Django.
