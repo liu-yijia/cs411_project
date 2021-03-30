@@ -1,6 +1,9 @@
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, request, render_template
+from uber_rides.session import Session
+from uber_rides.client import UberRidesClient
 
-@app.route('/')
-def hello_world():
-    return 'Our App!'
+session = Session(server_token=<TOKEN>)
+client = UberRidesClient(session)
+
+
+app = Flask(__name__)
