@@ -6,8 +6,6 @@ COPY requirement.txt .
 
 RUN pip install -r requirement.txt
 
-COPY src/ .
-
 EXPOSE 5000
 
-CMD ["", ""]
+CMD ["export FLASK_APP=app.py", "flask run"]
