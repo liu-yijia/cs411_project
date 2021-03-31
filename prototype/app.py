@@ -1,41 +1,32 @@
-from flask import Flask, request, render_template
-//pip install uber-rides
-from uber_rides.auth import AuthorizationCodeGrant
-auth_flow = AuthorizationCodeGrant(
-    <YYWIwFNEDhAk-jn7hmV73pU55RlznK9P>,
-    <SCOPES>,
-    <u_oa_8pT-ksFwKg4kUKIBf4sGSLeFuaahcubS-J4>,
-    <REDIRECT_URI>
-)
-auth_url = auth_flow.get_authorization_url()
-from uber_rides.session import Session
-from uber_rides.client import UberRidesClient
+#tutorial: https://github.com/himanshukamal/spotify-music/blob/main/app.py
 
-session = Session(server_token=<TOKEN>)
-client = UberRidesClient(session)
-
-//Get a list of available products
-response = client.get_products(37.77, -122.41)
-products = response.json.get('products')
-
-//Get price and time estimates
-response = client.get_products(37.77, -122.41)
-products = response.json.get('products')
-response = client.get_price_estimates(
-    start_latitude=37.770,
-    start_longitude=-122.411,
-    end_latitude=37.791,
-    end_longitude=-122.405,
-    seat_count=2
-)
-
-estimate = response.json.get('prices')
-
+from flask import Flask, render_template, redirect, url_for, request,jsonify
 app = Flask(__name__)
 
-session = Session(server_token=<TOKEN>)
-client = UberRidesClient(session)
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
 
-@app.route('/')
-def hello():
-    return 'Hello, World!'
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
+	client_id
+	client_secret
+	)
+)
+
+@app.route('/',methods = ['POST', 'GET'])
+def login():
+	if request.method == 'POST':
+		search_text = request.form['nm']
+
+		results = sp.search(q=search_text, limit=10)
+		# for idx, track in enumerate(results['tracks']['items']):
+		# 	print(idx, track['name'])
+		songlist = results['tracks']['items']
+
+		return render_template('spotify-search.html', tracks=songlist)
+		# return jsonify(results)
+	else:
+		user = request.args.get('nm')
+		return render_template('spotify-search.html')
+
+if __name__ == '__main__':
+	app.run(debug = True)
