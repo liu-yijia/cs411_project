@@ -1,11 +1,14 @@
-FROM python:3.6
+
+FROM python:3.8
 
 WORKDIR /code
 
-COPY requirement.txt .
+COPY requirements.txt .
 
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt
+
+COPY src/ .
 
 EXPOSE 5000
 
-CMD ["export FLASK_APP=app.py", "flask run"]
+CMD [ "python", "./app.py" ]
